@@ -1,0 +1,11 @@
+'''
+Sumar els digits d'un numero convertint-lo primer en string i anar iterant amb els seus char
+'''
+
+def SumaDigits(num):
+    a = 0
+    num = (str)(num)
+    for char in num:
+        a = a + (int)(char)
+    print(a)
+SumaDigits(23)

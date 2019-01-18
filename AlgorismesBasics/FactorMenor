@@ -1,0 +1,18 @@
+'''
+Troba tots els factorials de nombres tal que els factorials siguin menors que 500000:
+'''
+
+def factmenor():
+#Variable que s'usa per emmagatzemar !(n-1) i serveix com a tope del factorial menor que 999999999999999999999999    
+    factor = 1
+# Comptador per anar multiplicant (factorial = !(n-1)) per n
+    n = 1
+
+    while factor < 999999999999999999999999: 
+        factor = (n) * (factor)
+        n = n + 1
+        print (factor)
+            
+# Suposem que el conjunt de nombres naturals no inclou el 0        
+     
+factmenor()

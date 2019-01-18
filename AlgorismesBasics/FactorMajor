@@ -1,0 +1,22 @@
+'''
+Factor major d'un nombre, el que he fet ha sigut calcular tots els factors i després agafar l'últim de la llista.
+Primer definim com a primer nombre per evaluar el 2. Mentres que el producte del nombre per evaluar sigui menor que el nombre, 
+si el nombre per evaluar no és factor, incrementar una unitat. Si és factor, dividir nombre pel factor i afegir factor a llista.
+Quan el producte del num per evaluar sigui major que el nombre, si el nombre és major que 1 llavor afegir el nombre a la llista
+de factors.
+'''
+
+def FactorMajor(n):
+    llistaFactors = []
+    factor = 2
+    while factor*factor <= n:
+        if n%factor:
+            factor+=1
+        else:
+            n = n//factor
+            llistaFactors.append(factor)
+    if n > 1:
+        llistaFactors.append(n)
+    print(llistaFactors)
+    
+FactorMajor(13195)

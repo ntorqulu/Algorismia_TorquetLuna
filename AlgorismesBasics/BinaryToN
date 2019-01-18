@@ -1,0 +1,35 @@
+'''
+Convertir numeros a binary, de 1 fins a N de dues maneres, amb la funció bin:
+- convertir números de 1 a N i imprimir-los com a llista
+- imprimir-los com a string tot junt
+sense funció bin:
+- evaluant si el numero es parell o senar i anar sumant 1 i 0 i anar dividint num entre 2
+'''
+
+def binary(n):
+    binaryList = []
+    for i in range(1, n+1):
+        a = bin(i)
+        binaryList.append(a[2:])
+    return(binaryList)
+binary(4)
+
+def binToStr(n):
+    a = binary(n)
+    b = "".join(a)
+    print(b)
+
+binToStr(5)
+
+def int_to_bin_string(i):
+    if i == 0:
+        return "0"
+    s = ''
+    while i:
+        if i & 1 == 1:
+            s = "1" + s
+        else:
+            s = "0" + s
+        i //= 2
+    return s
+int_to_bin_string(5)

@@ -1,0 +1,27 @@
+'''
+Funcio que calcula el producte de tots els elements de la llista menys un , que va iterant, sense emprar la divisió
+'''
+
+
+def producte(nums):
+    producte = 1
+    llistamultiples = []
+    llscopia = nums.copy()
+    for i in range(0,len(nums)):
+        del nums[i]
+        for j in range(0,len(nums)):
+            producte*= nums[j]
+        llistamultiples.append(producte)
+        producte = 1
+        nums = llscopia.copy()
+
+            
+   
+    
+         
+    print(llistamultiples)
+        
+
+    
+
+producte([5,3,2,4,6,8])

@@ -1,0 +1,46 @@
+'''
+Donada una seqüència de tecles del mòbil, el programa et retorna totes les possibles combinacions de lletres
+'''
+
+def teclesMobil(num):
+    Dicc = {
+        "0": (),
+        "1" : (),
+        "2": ("a", "b", "c"),
+        "3": ("d", "e", "f"),
+        "4": ("g", "h", "i"),
+        "5": ("j", "k", "l"),
+        "6": ("m", "n", "o"),
+        "7": ("p", "q", "r", "s"),
+        "8": ("t", "u", "v"),
+        "9": ("w", "x", "y", "z")
+               }
+    result1 = [ "" ]
+    result2 = []
+    for char in num:
+        lista = Dicc[char]
+        if 0 == len(lista):
+            continue
+        for element in result1:
+            for suffix in lista:
+                result2.append(element + suffix)
+        result1 = result2
+        result2 = []
+    print(result1)
+    
+teclesMobil("234")
+
+
+
+# Si volem que el diccionari es creï a partir d'un fitxer:
+
+ with open("tecles.txt") as file:
+        Dicc = {}
+        a = 0
+        f = (str)(a)
+        for lines in file:
+            f = (str)(a)
+            Dicc[f] = lines.strip().split(",")
+            a +=1
+print(Dicc)
+

@@ -1,0 +1,22 @@
+'''
+Dues funcions, la primera comprova si paraula és capicua comprovant lletra per lletra si coincideixen del dret i del revés
+La segona calcula totes les possibles paraules capicua que sorgeixen al combinar lletres d'una paraula
+'''
+
+def Capicua(s):
+    if s[::1] == s[::-1]:
+        return True
+    else:
+        return False
+
+Capicua("amma")
+    
+    
+from itertools import permutations
+def CapicuaRotacio(s):
+    for i in permutations(s):
+        perm = " ".join(i)
+        if Capicua(perm)==True:
+            print(perm, "es capicua")
+        
+CapicuaRotacio("abaabcc")

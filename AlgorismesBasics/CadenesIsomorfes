@@ -1,0 +1,30 @@
+'''
+mirar si dues strings tenen correspondència de caracters, boo = foo, dady=xcxy...
+Procediment:
+primer de tot creem dos diccionaris que guardaran les keys de totes dues strings. 
+- Comprovem que la longitud de les strings es la mateixa
+- per un range amb la longitud d'una de les strings
+- si element en la posició i de la primera string es troba ja en el dicc i no correspon amb el value en la posició de string t
+retorna False
+- si element en la posisció i de l'string t ja està en el dicc i la seva key no correspon amb valor de s en aquella posicio
+return false
+else:
+afegir el valor i la key d'aquell element
+'''
+
+def isomorfiques(s,t):
+    sDic = {}
+    tDic = {}
+    if len(s) != len(t):
+        return False
+    for i in range(len(s)):
+        if s[i] in sDic.keys() and sDic[s[i]] != t[i]:
+            return False
+        elif t[i] in tDic.keys() and tDic[t[i]] != s[i]:
+            return False
+        else:
+            sDic[s[i]] = t[i]
+            tDic[t[i]] = s[i]
+    return True    
+isomorfiques("aabb", "bbaa")
+    

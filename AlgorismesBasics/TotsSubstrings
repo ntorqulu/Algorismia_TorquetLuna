@@ -1,0 +1,13 @@
+'''
+Imprimeix totes les possibles substrings d'una paraula
+'''
+
+def substrings(paraula):
+    totSubstrings = []
+    for i in range(len(paraula)):
+        for j in range(i, len(paraula)):
+            totSubstrings.append(paraula[i:j+1])
+            
+    print(totSubstrings)
+    
+substrings("hola")

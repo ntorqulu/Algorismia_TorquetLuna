@@ -1,0 +1,11 @@
+'''
+funció que converteix dígits separats per punts en numero seguit
+'''
+
+
+def comptar(n):
+    a = n.split(".")
+    b = "".join(a)
+    print(b)
+    
+comptar("123.234.345")

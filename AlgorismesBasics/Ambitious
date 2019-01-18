@@ -1,0 +1,39 @@
+def Ambicios(num):
+'''
+funció que calcula si un nombre és ambiciós, és a dir, si la suma dels seus divisors(excloent-se a ell mateix)
+de manera recurssiva és un nombre perfecte
+'''
+'''
+Procediment:
+- crear dues funcions, una que calculi els divisors d'un nombre i els sumi i una altra que comprovi si és ambiciós
+- funcio DIVISORS : iteració for que vagi de 1 fins al nombre/2 i vagi ajuntant els seus divisors en una llista, sumar-la
+- funcio AMBICIOS : crear llista buida amb numero introduit, assignar a una variable la suma de la llista de DIVISORS i amb
+un while comprovar si la variable es troba a la llista. Si és així, comprovar que sigui l'últim terme i diff de 0, retornar
+ambiciós, si no retornar no ambiciós. En cas que no es trobi a la llista, afegir suma a la llista i aplicar funció DIVISORS.
+'''
+
+def DIVISORS(num):
+  llistaSuma = []
+  for i in range(1, (num//2+1)):
+    if num % i == 0:
+      llistaSuma.append(i)
+  return sum(llistaSuma)
+  
+
+def AMBICIOS(num):
+  llistaNum = [num]
+  calcular = True
+  while calcular:
+    a = DIVISORS(llistaNum[-1])
+    if a in llistaNum:
+      if a == llistaNum[-1] and a != 0:
+        print("Ambicios")
+        calcular = False
+      elif a == 0:
+        print("No ambicios")
+        calcular = False
+    
+    else:
+      llistaNum.append(a)
+  
+  AMBICIOS(57)

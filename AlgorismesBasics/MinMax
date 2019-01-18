@@ -1,0 +1,12 @@
+'''
+Trobar el max i el min d'una llista
+'''
+
+def MinimMaxim(llista):
+    for i in range(0, len(llista)-1):
+        if llista[i] > llista[i+1]:
+            llista[i], llista[i+1] = llista[i+1], llista[i]
+            
+    print(llista[0], llista[-1])
+    
+MinimMaxim([0,2,7,4,3,4

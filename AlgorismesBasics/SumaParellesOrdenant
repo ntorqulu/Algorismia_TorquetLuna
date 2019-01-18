@@ -1,0 +1,14 @@
+'''
+Troba totes les parelles de nombres en una llista tal que donin com a resultat el valor introduit.
+'''
+
+def parellaSuma(llista, valor):
+    complements = set()
+    for element in llista:
+        if element in complements:
+            print(element, valor-element)
+            return True
+            
+        complements.add(valor - element)
+    return False
+parellaSuma([3,1,5,2,7,8], 10)

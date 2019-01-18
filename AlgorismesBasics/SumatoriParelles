@@ -1,0 +1,13 @@
+'''
+Si la suma de dos termes de la llista correspon amb el valor introduit, retorna els dos termes
+'''
+
+def SumatoriParelles(llista, valor):
+    for i in range(0, len(llista)):
+       n = llista[i]              
+       for j in range(i+1, len(llista)):
+            m = llista[j]
+            if n + m == valor:
+                print(n, m)
+                     
+SumatoriParelles([2,3,2,3], 10)

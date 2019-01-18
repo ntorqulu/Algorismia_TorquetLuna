@@ -1,0 +1,14 @@
+'''
+potencia de dos et calcula si número introduit es una potencia de dos, basan-se en la seva escriptura en bits.
+una potencia de dos només consta d'un 1 i tot zeros mentres que el seu num anterior són tot 
+1 on en la potència hi havien zeros.
+4 = 100
+3 = 11
+'''
+
+def comptar(n):
+    a = n.split(".")
+    b = "".join(a)
+    print(b)
+    
+comptar("123.234.345")

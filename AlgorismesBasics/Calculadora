@@ -1,0 +1,20 @@
+'''
+Creeu una funció anomenada calculadora que permeti fer operacions de suma, 
+resta i multiplicació amb nombres naturals a partir d'una entrada que sigui enter. 
+L'usuari anirà entrant les operacions, i quan vulgui acabar farà <espai> Exemple de funcionament:
+
+Calculadora
+ Entra operació: 4+5
+ 9
+ Entra operació: 7-2
+ 5
+ Entra operació: 1*4
+ '''
+ 
+ def calculadora():
+    user = (input("introdueix operacions"))
+    while user != "":
+        a = eval(user)
+        print(a)
+        user = (input("introdueix operacions"))
+calculadora()  

@@ -1,0 +1,19 @@
+'''
+Funció que ens digui si els divisors d'un nombre són iguals a un altre nombre.
+Reutilitzar funció divisors.
+'''
+
+def Divisors(num):
+    llistaSuma = []
+    for i in range(1, num//2+1):
+        if num % i == 0:
+            llistaSuma.append(i)
+    return sum(llistaSuma)
+
+def Friends(n1, n2):
+    if (Divisors(n1) == n2) and (Divisors(n2) == n1):
+        return True
+    else:
+        return False
+
+Friends(4, 7)

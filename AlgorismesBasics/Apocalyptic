@@ -1,0 +1,35 @@
+'''
+Exercici on et demanen que trobis numeros apocalíptics, aquells que són exponent de 2 i contenen el substring "666".
+Dividi en tre subexercicis:
+1. Escriure funció on evalues si un nombre és apocaliptic
+2. Trobar nombres apocaliptics entre 100 i 300
+3. Troba tots els nombres apocaliptics menors que 500
+'''
+
+def Apocaliptic(num):
+  n1 = (str)(2 ** num)
+  if "666" in n1:
+    return True
+  else:
+    return False
+
+
+def Apocaliptic100_300():
+  llistaApocaliptica = []
+  for i in range(100, 301):
+    if Apocaliptic(i) == True:
+      llistaApocaliptica.append(i)
+      
+  print(llistaApocaliptica)
+  
+  
+def ApocalipticFins500:
+  llistaApocaliptica = [0]
+  count = 0
+  while llistaApocaliptica[-1] < 500:
+    if Apocaliptic(i) == True:
+      llistaApocaliptica.append(i)
+    i + = 1
+  print(len(llistaApocaliptica)-1)
+    
+  

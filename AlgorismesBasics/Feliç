@@ -1,0 +1,22 @@
+'''
+Un nombre es feliç si la suma dels seus dígits al quadrat és igual a u de manera recursiva
+'''
+def felic(num):
+    llistaFelic = []
+    
+    a = (str)(num)
+    while True:
+    r = 0
+    for char in a:
+        r =((int)(char)*(int)(char)
+    if r == 1:
+        return True
+        
+    if r in llistFelic:
+        return False
+    
+    llistaFelic.append(r)
+    num = r
+        
+    
+felic(22)

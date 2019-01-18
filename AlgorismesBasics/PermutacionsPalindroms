@@ -1,0 +1,24 @@
+'''
+Trobar totes les possibles combinacions de lletres en una paraula per a generar palindroms
+'''
+
+from itertools import permutations
+def palindrom():
+    pal = input("introdueix una str")
+    llistaPermutacions = []
+    for i in permutations(pal):
+        llistaPermutacions.append(" ".join(i))
+    a = isPalindrom(llistaPermutacions)
+    if not a:
+        print("no es palindrom")
+    else:
+        unic = list(set(a))
+        print("es palindrom", unic)
+    
+def isPalindrom(llistaPermutacions):
+    llistaPalindroms = []
+    for element in llistaPermutacions:
+        if element[::1]== element[::-1]:
+            llistaPalindroms.append(element)
+    return llistaPalindroms
+palindrom()   
